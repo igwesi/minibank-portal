@@ -59,7 +59,7 @@ export default function AppShell() {
         <span className="grid size-9 place-items-center rounded-full bg-brand-100 text-sm font-bold text-brand-800">{initials}</span>
       </header>
 
-      <main className="mx-auto w-full max-w-6xl px-4 pb-28 pt-5 sm:px-6 lg:px-10 lg:pb-12 lg:pt-10">
+      <main className="mx-auto w-full max-w-[95%] px-4 pb-28 pt-5 sm:px-6 lg:px-10 lg:pb-12 lg:pt-10">
         <Outlet />
       </main>
 
