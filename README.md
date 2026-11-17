@@ -2,7 +2,7 @@
 
 A responsive retail-banking web app: Naira (₦) and USD accounts, instant P2P transfers, airtime/data/electricity/cable payments, and a searchable, filterable transaction ledger with real-time updates.
 
-**Stack:** React 19 · Vite · Tailwind CSS v4 · Supabase (Auth, Postgres, RLS, Realtime) · Vercel
+**Stack:** React 19 · Vite · Tailwind CSS v4 · Supabase (Auth, Postgres, RLS, Realtime) · Render / Vercel
 
 > Demo environment. No real money moves; bill payments are simulated.
 > Demo login: `demo@minibank.app` / `MiniBank#2026` (or click **Explore with demo account**).
@@ -46,6 +46,12 @@ npm install
 cp .env.example .env   # fill in VITE_SUPABASE_URL and VITE_SUPABASE_PUBLISHABLE_KEY
 npm run dev
 ```
+
+## Deploy (Render)
+1. Push this repo to GitHub.
+2. In Render: **New → Blueprint**, pick the repo. `render.yaml` sets up a static site (build `npm ci && npm run build`, publish `dist`, SPA rewrite and security headers).
+3. When prompted, enter `VITE_SUPABASE_URL` and `VITE_SUPABASE_PUBLISHABLE_KEY`, then apply.
+4. In Supabase go to **Authentication → URL Configuration** and set **Site URL** to the `https://minibank-portal.onrender.com` address Render gives you.
 
 ## Deploy (Vercel)
 1. Import the GitHub repo in Vercel (framework preset: **Vite**).
